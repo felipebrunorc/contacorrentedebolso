@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+        <item
+            android:id="@+id/AnaliseId"
+            android:title="Análise"
+        />
+        <item
+            android:id="@+id/IncluirId"
+            android:title="Incluir"
+        />
+        <item
+            android:id="@+id/ListarId"
+             android:title="Lista"
+        />
+</menu>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fundoBranco"
+    android:layout_alignParentBottom="false"
+    android:layout_centerHorizontal="false"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context="br.estacio.fic.pdm.contacorrente.SegundaActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="25dp">
+
+        <RadioGroup
+            android:id="@+id/rdgId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <RadioButton
+                android:id="@+id/rdbDespesaId"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="Despesas"
+                android:onClick="selecionarCategoria"/>
+
+            <RadioButton
+                android:id="@+id/rdbReceitaId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Receitas"
+                android:onClick="selecionarCategoria"/>
+
+            <RadioButton
+                android:id="@+id/rdbInvestimentoId"
+                android:layout_width="166dp"
+                android:layout_height="wrap_content"
+                android:text="Investimentos"
+                android:onClick="selecionarCategoria"/>
+
+
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="Categoria/SubCategoria" />
+
+    <Spinner
+        android:id="@+id/spnCategoriaId"
+        android:layout_width="386dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="0.09"
+        android:hint="Categoria/Sub-Categoria"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="#00acc1" />
+
+    <EditText
+        android:id="@+id/descricaoId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Descrição"
+        android:inputType="textPersonName"
+        android:textAlignment="center" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edtDataId"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:padding="10dp"
+            android:textAlignment="center" />
+
+        <ImageButton
+            android:id="@+id/imgCalendarioId"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:background="@drawable/calendario"
+            android:onClick="selecionarData"
+            android:padding="6dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edtValorId"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:hint="Valor"
+            android:padding="10dp"
+            android:inputType="numberDecimal"
+            android:numeric="integer"
+            android:textAlignment="center"
+             />
+
+        <CheckBox
+            android:id="@+id/chkRecorrenteId"
+            android:layout_width="187dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:padding="10dp"
+            android:text="Recorrente"
+            android:textAlignment="center"
+            android:textColor="#000000" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <EditText
+            android:id="@+id/edtParcelaId"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:hint="Nº Parcela"
+            android:padding="10dp"
+            android:textAlignment="center" />
+
+        <ImageButton
+            android:id="@+id/imgParcelaId"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/numerico"
+            android:padding="6dp"
+            android:layout_weight="2.05" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/botaoInserirId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="50dp"
+        android:background="@color/corBotoes"
+        android:onClick="salvarLancamento"
+        android:text="Inserir"
+        />
+
+
+
+
+</LinearLayout>
